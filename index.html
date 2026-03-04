@@ -1,73 +1,40 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ Quiz</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400&display=swap" rel="stylesheet">
+    <title>Ôn luyện kỳ thi Trạng Nguyên Tiếng Việt Lớp 2</title>
     <style>
         body {
-            background: linear-gradient(to right, #E53935, #FFB300);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-top: 20px;
         }
-        .card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .quiz-card {
+            cursor: pointer;
+            border: 2px solid #007bff;
+            border-radius: 8px;
             padding: 20px;
-            transition: transform 0.3s;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .quiz-number {
-            font-size: 24px;
-            color: #1565C0;
+        .quiz-card:hover {
+            background-color: #e7f0ff;
         }
     </style>
 </head>
 <body>
-    <h1>Chào mừng đến với trang Quiz!</h1>
-    <div class="container">
-        <!-- Quiz Cards -->
-        <div class="card" onclick="location.href='1.html';">
-            <div class="quiz-number">Đề 1</div>
-        </div>
-        <div class="card" onclick="location.href='2.html';">
-            <div class="quiz-number">Đề 2</div>
-        </div>
-        <div class="card" onclick="location.href='3.html';">
-            <div class="quiz-number">Đề 3</div>
-        </div>
-        <div class="card" onclick="location.href='4.html';">
-            <div class="quiz-number">Đề 4</div>
-        </div>
-        <div class="card" onclick="location.href='5.html';">
-            <div class="quiz-number">Đề 5</div>
-        </div>
-        <div class="card" onclick="location.href='6.html';">
-            <div class="quiz-number">Đề 6</div>
-        </div>
-        <div class="card" onclick="location.href='7.html';">
-            <div class="quiz-number">Đề 7</div>
-        </div>
-        <div class="card" onclick="location.href='8.html';">
-            <div class="quiz-number">Đề 8</div>
-        </div>
-        <div class="card" onclick="location.href='9.html';">
-            <div class="quiz-number">Đề 9</div>
-        </div>
-        <div class="card" onclick="location.href='10.html';">
-            <div class="quiz-number">Đề 10</div>
-        </div>
-    </div>
+    <h1>Ôn luyện kỳ thi Trạng Nguyên Tiếng Việt Lớp 2</h1>
+    <div class="quiz-card">Quiz 1</div>
+    <div class="quiz-card">Quiz 2</div>
+    <div class="quiz-card">Quiz 3</div>
 </body>
 </html>
