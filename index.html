@@ -1,40 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ôn luyện kỳ thi Trạng Nguyên Tiếng Việt Lớp 2</title>
+    <title>Ôn Luyện Kỳ Thi Trạng Nguyên Tiếng Việt Lớp 2</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-            margin: 0;
+            background: linear-gradient(to right, #FFF9C4, #FFE0B2, #E3F2FD);
+            margin: 0; 
             padding: 0;
+            color: #333;
         }
         h1 {
             text-align: center;
-            color: #333;
+            margin-top: 30px;
             font-size: 2.5em;
-            margin-top: 20px;
+            font-weight: bold;
         }
-        .quiz-card {
-            cursor: pointer;
-            border: 2px solid #007bff;
-            border-radius: 8px;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
             padding: 20px;
-            margin: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
-        .quiz-card:hover {
-            background-color: #e7f0ff;
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .crown {
+            font-size: 2em;
+            animation: bounce 0.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
     <h1>Ôn luyện kỳ thi Trạng Nguyên Tiếng Việt Lớp 2</h1>
-    <div class="quiz-card">Quiz 1</div>
-    <div class="quiz-card">Quiz 2</div>
-    <div class="quiz-card">Quiz 3</div>
+    <div class="container">
+        <div class="card" onclick="location.href='1.html'"><span class="crown">👑</span> Quiz 1</div>
+        <div class="card" onclick="location.href='2.html'"><span class="crown">👑</span> Quiz 2</div>
+        <div class="card" onclick="location.href='3.html'"><span class="crown">👑</span> Quiz 3</div>
+        <div class="card" onclick="location.href='4.html'"><span class="crown">👑</span> Quiz 4</div>
+        <div class="card" onclick="location.href='5.html'"><span class="crown">👑</span> Quiz 5</div>
+        <div class="card" onclick="location.href='6.html'"><span class="crown">👑</span> Quiz 6</div>
+        <div class="card" onclick="location.href='7.html'"><span class="crown">👑</span> Quiz 7</div>
+        <div class="card" onclick="location.href='8.html'"><span class="crown">👑</span> Quiz 8</div>
+        <div class="card" onclick="location.href='9.html'"><span class="crown">👑</span> Quiz 9</div>
+        <div class="card" onclick="location.href='10.html'"><span class="crown">👑</span> Quiz 10</div>
+    </div>
 </body>
 </html>
