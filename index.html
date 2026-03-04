@@ -27,20 +27,31 @@
         <div class="px-8 pb-12">
             <div id="de-list" 
                  class="grid grid-cols-3 sm:grid-cols-6 gap-4">
-                <!-- JS sẽ tự sinh 18 badge -->
+                <!-- JS sẽ tự sinh -->
             </div>
         </div>
 
-        <!-- Footer nhỏ -->
+        <!-- Footer -->
         <div class="text-center py-6 border-t text-gray-400 text-sm">
             Lớp 2 • Chúc bạn đạt Trạng Nguyên! 👑
         </div>
     </div>
 
+    <!-- Âm thanh chuông phép thuật lấp lánh -->
+    <audio id="magic" src="magic-twinkle.mp3" preload="auto"></audio>
+
     <script>
-        // Tailwind script
+        // Âm thanh phép thuật
+        const magicSound = document.getElementById('magic');
+
+        function playMagicTwinkle() {
+            magicSound.currentTime = 0;
+            magicSound.volume = 0.8;
+            magicSound.play().catch(() => {});
+        }
+
+        // Tạo 18 badge
         function initTailwind() {
-            // Mảng màu rainbow pastel
             const colors = [
                 "bg-red-400 hover:bg-red-500", "bg-orange-400 hover:bg-orange-500",
                 "bg-amber-400 hover:bg-amber-500", "bg-yellow-400 hover:bg-yellow-500",
@@ -63,12 +74,14 @@
                     flex items-center justify-center
                 `;
                 btn.textContent = `ĐỀ SỐ ${i}`;
-                btn.onclick = () => window.open(`${i}.html`, '_blank');
+                btn.onclick = () => {
+                    playMagicTwinkle();           // ← Tiếng chuông phép thuật lấp lánh vang lên
+                    window.open(`${i}.html`, '_blank');
+                };
                 container.appendChild(btn);
             }
         }
 
-        // Chạy khi load
         window.onload = initTailwind;
     </script>
 </body>
