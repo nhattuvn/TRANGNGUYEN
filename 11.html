@@ -905,5 +905,42 @@ var _dragEl=null,_touchEl=null,_touchClone=null;
 })();
 
 </script>
+<script>
+// tn-highscore-sync
+(function() {
+  const match = window.location.pathname.match(/(\d+)\.html$/);
+  if (!match) return;
+
+  const deNumber = parseInt(match[1], 10);
+  const storageKey = `tn_lop2_de_${deNumber}_highscore`;
+  const resultEl = document.getElementById('result');
+  const pointsEl = document.getElementById('rpts');
+
+  if (!resultEl || !pointsEl) return;
+
+  function saveHighScore() {
+    const scoreText = (pointsEl.textContent || '').replace(/[^\d]/g, '');
+    const score = parseInt(scoreText, 10);
+    if (Number.isNaN(score)) return;
+
+    const prev = parseInt(localStorage.getItem(storageKey) || '0', 10);
+    if (score > prev) {
+      localStorage.setItem(storageKey, String(score));
+    }
+  }
+
+  const pointObserver = new MutationObserver(saveHighScore);
+  pointObserver.observe(pointsEl, { childList: true, characterData: true, subtree: true });
+
+  const resultObserver = new MutationObserver(function() {
+    if (window.getComputedStyle(resultEl).display !== 'none') {
+      saveHighScore();
+    }
+  });
+  resultObserver.observe(resultEl, { attributes: true, attributeFilter: ['style', 'class'] });
+
+  window.addEventListener('beforeunload', saveHighScore);
+})();
+</script>
 </body>
 </html>
